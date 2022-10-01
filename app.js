@@ -60,7 +60,6 @@ app.post("/webhook", (req, res) => {
                 "time": timestamp,
                 "body": msg_text
             };
-            messages[key].push(msg);
             let url =
                 "http://api-load-balancer-1837023667.us-east-1.elb.amazonaws.com/temp/";
             url = url + msg["from"] + "/" + msg["time"] + "/" + msg["body"]
